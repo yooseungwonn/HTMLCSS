@@ -13,11 +13,12 @@
     <!-- border, width, height 속성들 스타일 시트에서 표시
          지금은 연습을 위해서 사용-->
     <table border="1">
+        <caption>성적표</caption>
          <!-- 테이블 헤더 : Thead-->
         <thead>
         <!-- 행정보 : TR-->
         <tr>
-            <!-- 헤더 : TD-->
+            <!-- 컬럼 헤더(제목) : TH-->
             <th width="200" height="30">이름</th>
             <th>나이</th>
             <th>점수</th>
@@ -27,7 +28,8 @@
 
      <!-- 실제 데이터 : Tbody-->
      <tbody>        
-        <tr>           
+        <tr>
+            <!-- 데이터 : TD -->           
             <td>김철수</td>
             <td>22</td>
             <td>88</td>            
@@ -56,6 +58,27 @@
     </ul>
 
     <!-- 열과 행 확장 연습 -->
+    <!-- 4행 3열의 테이블-->
+    <table border="1">
+        <tr>
+            <!-- rowspan 속성 : 확장할 행의 개수-->
+            <td width="100" rowspan="2">(1, 1)</td>
+            <td width="100">(1, 2)</td>
+            <td width="100">(1, 3)</td>
+        </tr>
+        <tr>
+            <!--td>(2, 1)</td -->
+            <!-- colspan 속성 : 확장할 컬럼의 개수-->
+            <td colspan="2">(2, 2)</td>            
+        </tr>
+        <tr>
+            <td>(3, 1)</td>
+            <td colspan="2" rowspan="2">(3, 2)</td>           
+        </tr>
+        <tr>
+            <td>(4, 1)</td>            
+        </tr>
+    </table>
 </body>
 
 </html>
