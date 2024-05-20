@@ -3,6 +3,103 @@
 
 <head>
     <title>CSS 크기 단위 실습</title>
+    <style>
+        /* 절대 단위 */
+        #text-px > li:first-child {
+
+        }
+
+        #text-px > li:nth-child(2){
+            font-size: 16px;
+        }
+
+        #text-px > li:nth-child(3){
+            font-size: 24px;
+        }
+
+        #text-px > li:last-child{
+            font-size: 32px;
+        }
+
+        /* 상대 단위 : percent */
+
+        #text-percent > li:first-child{
+            
+        }
+        #text-percent > li:nth-child(2){
+            font-size: 100%;
+        }
+        #text-percent > li:nth-child(3){
+            font-size: 150%;
+        }
+        #text-percent > li:last-child{
+            font-size: 200%;
+        }
+         /* 상대 단위 : em */
+        #text-em > li:first-child{
+            
+        }
+        #text-em > li:nth-child(2){
+            font-size: 1.0em;
+        }
+        #text-em > li:nth-child(3){
+            font-size: 1.5em;
+        }
+        #text-em > li:last-child{
+            font-size: 2.0em;
+        }
+         /* 상대 단위 : rem(배수) */
+         /* em : 부모의 size 기준
+           rem : 최상위 요소(html)의 size 기준
+         */
+        #text-rem > li:first-child{
+            
+        }
+        #text-rem > li:nth-child(2){
+            font-size: 1.0rem;
+        }
+        #text-rem > li:nth-child(3){
+            font-size: 1.5rem;
+        }
+        #text-rem > li:last-child{
+            font-size: 2.0rem;
+        }
+        /* 표시 용도의 CSS */
+        div[class]{
+            border: 1px solid red;
+        }
+
+        /* 픽셀 단위 */
+        .pixel-box{
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin-bottom: 10px;
+        }
+        /* 백분율 단위 */
+        .percent-box{            
+            height: 100px;
+            width: 50%; /* 상대 단위 */
+            background-color: lightgreen;
+            margin-bottom: 10px;
+        }
+        /* em 단위 
+           기준 : 부모 요소의 font-size*/
+        .em-box{            
+            width: 10em;
+            height: 5em;
+            background-color: lightcoral;
+            margin-bottom: 10px;
+        }
+        /* rem 단위 
+           기준 : 최상위 요소의 font-size*/
+        .rem-box{            
+            width: 10rem;
+            height: 5rem;
+            background-color: lightyellow;
+            margin-bottom: 10px;
+        }
+        </style>
 </head>
 
 <body>
@@ -29,7 +126,8 @@
         </ul>
 
         <h3>em</h3>
-        <ul id="text-em">
+        <ul id="text-em"
+            style="font-size: 20px;">
             <li>em 단위로 크기를 지정해 봅시다 (브라우저 기본값)</li>
             <li>em 단위로 크기를 지정해 봅시다</li>
             <li>em 단위로 크기를 지정해 봅시다</li>
@@ -37,7 +135,8 @@
         </ul>
 
         <h3>rem</h3>
-        <ul id="text-rem">
+        <ul id="text-rem"
+            style="font-size: 20px;">
             <li>rem 단위로 크기를 지정해 봅시다 (브라우저 기본값)</li>
             <li>rem 단위로 크기를 지정해 봅시다</li>
             <li>rem 단위로 크기를 지정해 봅시다</li>
@@ -48,8 +147,11 @@
     <h2>Box</h2>
     <div class="pixel-box">픽셀(px) 단위</div>
     <div class="percent-box">백분율(%) 단위</div>
+    <div class="parent"
+         style="font-size: 20px;">
     <div class="em-box">em 단위</div>
     <div class="rem-box">rem 단위</div>
+    </div>
 </body>
 
 </html>

@@ -3,6 +3,49 @@
 
 <head>
     <title>CSS 색상 실습</title>
+    <style>
+        /* 배경 */
+        body{
+            background: yellow;
+        }
+
+        div{
+            /* 여백 */
+            margin: 10px;
+            padding: 10px;
+            /* 폰트 색상 */
+            color: white;
+            border: 1px dotted gray;
+        }
+
+        /* 키워드 색상 */
+        .keyword-color{
+            background-color: orange;
+        }
+        /* HEX 색상 */
+        .hex-color{
+            background-color: #ffa000FF;
+        }
+        /* RGB 색상 */
+        .rgb-color{
+            background-color: rgb(255, 165, 0);
+        }
+        /* RGBA 색상 */
+        .rgba-color{
+            background-color: rgba(255, 165, 0, 0.5);
+        }
+         /* HSL 색상 
+            - Hue (색조) : 0 ~ 360 
+            - Saturation (채도) : 0 (회색조) ~ 100% (완전한 색) 
+            - lightness (명도) : 0 (빛 없음) ~ 100% (완전한 밝기) */
+         .hsl-color{
+            background-color: hsl(30, 100%, 50%);
+        }
+         /* HSLA 색상 */
+         .hsla-color{
+            background-color: hsla(30, 100%, 50%, 0.5);
+        }
+    </style>
 </head>
 
 <body>
