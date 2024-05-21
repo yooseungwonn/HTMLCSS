@@ -3,6 +3,66 @@
 
 <head>
     <title>CSS Border 실습</title>
+ 
+    <style>
+        .box{
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .solid-border{
+            /* 개별 테두리 속성의 부여 */
+            /*border-width: 2px;
+            border-style: solid;
+            border-color: red;
+            margin-top: 1%;
+            margin-bottom: 1%;*/
+
+            /* 한번에 부여 : width style color*/
+            border: 2px solid red;
+        }
+        .dashed-border{
+            /* border-width: 1px;
+            border-style: dashed;
+            border-color: darkblue;
+            margin-top: 1%;
+            margin-bottom: 1%; */
+
+            border: 2px dashed blue;
+        }
+        .dotted-border{   
+            border: 2px dashed green;
+        }
+
+        .double-border{   
+            border: 2px double pink;
+        }
+        .groove-border{   
+            border: 4px groove purple;
+        }
+
+        /* border-radius : 테두리의 둥글기 꾸미는 속성 
+           기준 위치 : top-left -> top-right -> bottom-right -> bottom-left 순*/ 
+        img {
+            width: 140px;
+        }
+        img.round {
+            /* 테두리의 둥글기 개별 값을 적용 */
+            /*border-top-left-radius: 10px;
+            border-top-right-radius: 20px;            
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 40px;*/
+        
+        /* 값이 4개 : top-left -> top-right -> bottom-right -> bottom-left 순*/ 
+        /*border-radius: 10px 20px 30px 40px;*/
+
+        /* 값이 2개 : top-left,bottom-right  top-right,bottom-left 순*/ 
+        /*border-radius: 10px 50px;*/
+
+        /* 값이 1개 : 모든 테두리에 공통 속성 적용 */
+        border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>

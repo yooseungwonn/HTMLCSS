@@ -3,6 +3,46 @@
 
 <head>
     <title>CSS Display 실습</title>
+    <style>
+        /* block 방식의 공간 점유 */
+        .block-display{
+            display: block;
+            background-color: lightblue;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        /* inline-display*/
+        .inline-display{
+            display: inline;
+            background-color: lightcoral;
+        }
+        /* inline-block-display*/
+        .inline-block-display{
+            display: inline-block; /* 강제로 display 속성 변경 */
+            background-color: lightgreen;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        /* none-display*/
+        .none-display {
+            display: none;
+            /* 공간 점유하지 않는다. */
+        }
+
+        img.hidden, img.none, img.normal {
+            width: 50%;
+        }
+        /*  visibility : hidden */
+        img.hidden {
+            visibility: hidden;
+        }
+        /*  display : none 
+            -> 공간 점유 자체를 하지 않음 */
+        img.none {
+            display: none;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -24,8 +64,11 @@
 
     <h3>visibility vs display: none</h3>
     <div>
+        <h5>visibility : hidden</h5>
         <img class="hidden" src="../images/penguins.jpg">
+        <h5>display : none</h5>
         <img class="none" src="../images/penguins.jpg">
+        <h5>normal image</h5>
         <img class="normal" src="../images/penguins.jpg">
 
     </div>

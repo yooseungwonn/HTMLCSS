@@ -3,6 +3,53 @@
 
 <head>
     <title>CSS background 실습</title>
+    <!-- 모든 시각적인 HTML 요소의 배경 설정하는 속성들-->
+    <style>
+        /* background-image */
+        body {
+            background-image: url("../images/background.jpg");           
+        }
+        /* background-size: 이미지 크기 */
+        body {
+            /* background-size: 50%; */
+            /* background-size: 100%; */
+
+            /* 너비와 높이를 각각 다르게  */
+            background-size: 100% 200px;
+        }
+        /* background-repeat: 이미지 반복 방식 */
+        body {
+            background-size: 50%;
+            /* 반복 안함 */
+            /* background-repeat: no-repeat; */
+            /* x축으로만 반복 */
+            /* background-repeat: repeat-x; */
+            /* y축으로만 반복 */
+            background-repeat: repeat-y;
+        }
+        /* background-position */
+        body {
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* 고정 */
+            background-position: right;        
+        }
+
+        /* 개별 속성들의 조합 */
+        body {
+           /* background-image: url("../images/background.jpg");
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: lightgray; */
+        }
+
+        /* 속성 일괄 적용 : background */
+        /*  image position / size repeat attachment color  */
+        body {
+            background: url("../images/background.jpg") center / 100% no-repeat fixed lightgray;
+        }
+    </style>
 </head>
 
 <body>
